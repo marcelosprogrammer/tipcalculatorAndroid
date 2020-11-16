@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="3dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764"
+        app:rowCount="5"
+        app:useDefaultMargins="true">
+
+        <TextView
+            android:id="@+id/amontTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:labelFor="@id/amountEditText"
+            android:text="@string/Amount"
+            android:textSize="18sp"
+            app:layout_column="0"
+            app:layout_gravity="right"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="304dp"
+            android:layout_height="42dp"
+            android:background="@android:color/holo_orange_light"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="@dimen/textview_padding"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/amountDisplayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="fill_horizontal"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/customPercentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/custom_tip_percentage"
+            app:layout_column="0"
+            app:layout_gravity="right|center_vertical"
+            app:layout_row="1" />
+
+        <SeekBar
+            android:id="@+id/customTipSeekBar"
+            android:layout_width="220dp"
+            android:layout_height="51dp"
+            android:indeterminate="false"
+            android:max="30"
+            android:progress="18"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <LinearLayout
+            android:id="@+id/percentLinearLayout"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_column="1">
+
+            <TextView
+                android:id="@+id/percent15TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/fifteen_percent"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/percentCustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/eightteen_percent"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/tip"
+            app:layout_gravity="right|center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/tipLinearLayout"
+            android:layout_width="307dp"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tip15TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/tipCustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:padding="3dp" />
+        </LinearLayout>
+
+
+        <!-- passo 5-->
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total"
+            app:layout_gravity="right|center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/totalLinearLayout"
+            android:layout_width="307dp"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/total15TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/totalCustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:padding="3dp" />
+
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/viewspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
